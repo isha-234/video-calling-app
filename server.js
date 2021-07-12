@@ -9,6 +9,7 @@ const server = http.createServer(app);
 const Routes = require("./app/routes");
 const path = require('path');
 
+console.log("yoo1");
 app.use([
   cors(),
   bodyParser.json(),

@@ -82,11 +82,13 @@ const CallPage = () => {
         }
 
         peer.on("signal", async (data) => {
+          
           if (isAdmin) {
             let payload = {
               id,
               signalData: data,
             };
+            console.log("yoo3");
             await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
           } else {
             socket.emit("code", data, (cbData) => {
