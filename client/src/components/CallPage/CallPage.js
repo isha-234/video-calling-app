@@ -56,7 +56,7 @@ const CallPage = () => {
   }, []);
 
   const getRecieverCode = async () => {
-    const response = await getRequest(`${BASE_URL}${GET_CALL_ID}/${id}`);
+    const response = await getRequest(`${GET_CALL_ID}/${id}`);
     if (response.code) {
       peer.signal(response.code);
     }
@@ -89,7 +89,7 @@ const CallPage = () => {
               signalData: data,
             };
             console.log("yoo3");
-            await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
+            await postRequest(`${SAVE_CALL_ID}`, payload);
           } else {
             socket.emit("code", data, (cbData) => {
               console.log("code sent");
