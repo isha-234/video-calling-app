@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(255, 218, 170);
+  .logo {
+    .help-text {
+      font-size: 22px;
+      padding-left: 2px;
+      color: #5f6368;
+      font-weight: 600;
+    }
+  }
+}
