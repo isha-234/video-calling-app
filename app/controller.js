@@ -1,5 +1,6 @@
 const { saveCallId, getCallId } = require("./model");
 
+//Method saves Id in redis database
 exports.saveCallId = async (req, res) => {
   try {
     const { id, signalData } = req.body;
@@ -10,6 +11,7 @@ exports.saveCallId = async (req, res) => {
   }
 };
 
+//This method will get the call information from the redis database
 exports.getCallId = async (req, res) => {
   try {
     const { id } = req.params;

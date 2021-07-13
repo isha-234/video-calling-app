@@ -37,9 +37,9 @@ const HomePage = () => {
         </div>
         <div className="right-side">
           <div className="content">
-            <img src="https://media.istockphoto.com/vectors/illustration-of-two-happy-people-talking-via-video-call-vector-id1277041996?k=6&m=1277041996&s=612x612&w=0&h=XJU9lI9plckmABGRYGAfI73Td4VtDqPPYnW0SB78UuA=" alt=""/>
+            <img src="https://media.istockphoto.com/vectors/illustration-of-two-happy-people-talking-via-video-call-vector-id1277041996?k=6&m=1277041996&s=612x612&w=0&h=XJU9lI9plckmABGRYGAfI73Td4VtDqPPYnW0SB78UuA=" alt="" />
           </div>
-      </div>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-//Chat section of the call page
+//Message section of the call page which allows the two people to communicate via chat
 import { useState } from "react";
 import "./Messenger.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -33,7 +33,7 @@ const CallPage = () => {
     MessageListReducer,
     initialState
   );
-  
+
 
   const [streamObj, setStreamObj] = useState();
   const [screenCastStream, setScreenCastStream] = useState();
@@ -52,7 +52,7 @@ const CallPage = () => {
     socket.on("code", (data) => {
       peer.signal(data);
     });
-  
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getRecieverCode = async () => {
@@ -61,8 +61,9 @@ const CallPage = () => {
       peer.signal(response.code);
     }
   };
-
+  //peer-to-peer connection made
   const initWebRTC = () => {
+    //user's audio and video is enabled by default when the call is joined
     navigator.mediaDevices
       .getUserMedia({
         video: true,
@@ -82,12 +83,13 @@ const CallPage = () => {
         }
 
         peer.on("signal", async (data) => {
-          
+
           if (isAdmin) {
             let payload = {
               id,
               signalData: data,
             };
+            //payload will be stored in redis database
             await postRequest(`${BASE_URL}${SAVE_CALL_ID}`, payload);
           } else {
             socket.emit("code", data, (cbData) => {
@@ -110,7 +112,7 @@ const CallPage = () => {
               time: Date.now(),
             },
           });
-
+          //To send an alert when the message arrives
           setMessageAlert({
             alert: true,
             isPopup: true,
@@ -119,7 +121,7 @@ const CallPage = () => {
               msg: data.toString(),
             },
           });
-
+          //To make the message alert dissapear after a short interval
           alertTimeout = setTimeout(() => {
             setMessageAlert({
               ...messageAlert,
@@ -141,9 +143,9 @@ const CallPage = () => {
 
           video.play();
         });
-        
+
       })
-      .catch(() => {});
+      .catch(() => { });
   };
   //For sending messages
   const sendMsg = (msg) => {

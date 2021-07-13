@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./CallPageFooter.scss";
 
+//includes the stop audio,stop video,screen share functionality and disconnect call
 const CallPageFooter = ({
   isPresenting,
   stopScreenShare,

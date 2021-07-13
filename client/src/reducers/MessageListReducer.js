@@ -1,3 +1,4 @@
+//Used for the message feature
 const MessageListReducer = (state, action) => {
   let draftState = [...state];
   switch (action.type) {

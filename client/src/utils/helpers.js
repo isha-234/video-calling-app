@@ -1,3 +1,4 @@
+//for showing time on the video call page
 import moment from 'moment';
 
 export const formatDate = (timestamp) => {

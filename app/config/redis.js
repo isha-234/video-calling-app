@@ -1,3 +1,4 @@
+//contains the redis connections
 let redis = require("redis");
 var options = {
   host: process.env.REDIS_HOST,

@@ -1,4 +1,4 @@
-//Designing the UI for the header of the HomePage
+//Designing the UI for the header of the HomePage and NoMatch
 import React from 'react';
 import './Header.scss';
 

@@ -5,6 +5,7 @@ import { faCommentAlt } from "@fortawesome/free-solid-svg-icons";
 import "./CallPageHeader.scss";
 import { formatDate } from "./../../../utils/helpers";
 
+//includes the functionality for message button and time
 const CallPageHeader = ({
   isMessenger,
   setIsMessenger,
