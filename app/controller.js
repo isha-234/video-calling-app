@@ -2,7 +2,6 @@ const { saveCallId, getCallId } = require("./model");
 
 exports.saveCallId = async (req, res) => {
   try {
-    console.log("yoo");
     const { id, signalData } = req.body;
     await saveCallId(id, signalData);
     res.status(200).send(true);
